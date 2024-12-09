@@ -338,14 +338,12 @@ const FloatingLabelInput: React.ForwardRefRenderFunction<InputRef, Props> = (
         onTogglePassword(!secureText);
       }
       setSecureText(!secureText);
-      secureText ? setFocus() : setBlur();
     } else {
       if (!((secureText && !toggle) || (!secureText && toggle))) {
         if (onTogglePassword) {
           onTogglePassword(!toggle);
         }
         setSecureText(!toggle);
-        toggle ? setFocus() : setBlur();
       }
     }
   }
